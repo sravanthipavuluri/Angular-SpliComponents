@@ -1,0 +1,42 @@
+<div class="container" style="margin-top:50px;margin-bottom:0px;float:left;">
+  <div class="row">
+    <div class="col-md-12">
+        <p class="labelpara">Item Name</p>
+        <input type="text" [(ngModel)]="itemName">
+        <p class="labelpara">Item Description</p>
+        <input type="text" #itemDesc>
+        <p class="labelpara">Item Price</p>
+        <input type="text" #itemPrice>
+
+        <input type="button" (click)="addGLItem(itemDesc)" value="Add GList">
+        <input type="button" (click)="addGWLItem(itemDesc)" value="Add GWList">
+      </div>
+  </div>
+  <div class="row" id="infor">
+      <div class="col-md-12">
+          <p *ngIf="items.length > 3">You Have Successfully Added
+          <br>Item Name : {{itemName}}
+          </p>
+         
+      </div>
+  </div>
+  <!-- <div class="row">
+    <div class="col-md-12">
+     
+        <input type="number"  [(ngModel)]="itemPrice1" (change)="AddSum()" >
+        <input type="number"  [(ngModel)]="itemPrice2" (change)="AddSum()" >
+        <input type="number"  [(ngModel)]="itemPrice3" (change)="AddSum()">
+        <input type="number"  [(ngModel)]="itemPrice4" (change)="AddSum()">
+        
+        <p class="labelpara">Discount%</p>
+        <input type="number"  [(ngModel)]="discount" (change)="AddSum()">
+        <p class="labelpara">Discount Amount</p>
+        <p>{{((itemPrice1+itemPrice2+itemPrice3+itemPrice4)*(discount))/100}} </p>
+
+        <p class="labelpara">Total Sum</p>
+        <p>{{itemPrice1+itemPrice2+itemPrice3+itemPrice4}} </p>
+        <p class="labelpara">Final Sum</p>
+        <input type="number" [(ngModel)]="sum">       
+    </div>
+  </div> -->
+</div>
